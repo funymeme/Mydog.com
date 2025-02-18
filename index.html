@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Beautiful Dog ($BD)</title>
+    <style>
+        body {
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .logo {
+            width: 200px;
+            border-radius: 50%;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 20px;
+            color: white;
+            background: #ff9800;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background: #e68900;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" class="logo" alt="My Beautiful Dog Logo">
+        <h1>Welcome to My Beautiful Dog ($BD)</h1>
+        <p>If you don’t buy and comment, sorry!</p>
+        
+        <a class="button" href="#" onclick="copyContract()">Copy Contract Address</a>
+        <a class="button" href="https://pump.fun" target="_blank">Buy on Pump.fun</a>
+        <a class="button" href="https://solscan.io" target="_blank">View on Solscan</a>
+        <a class="button" href="https://t.me" target="_blank">Join Telegram</a>
+
+        <h2>Live Chart</h2>
+        <iframe src="https://pump.fun/embed/{contract_address}" width="600" height="400"></iframe>
+    </div>
+
+    <script>
+        function copyContract() {
+            navigator.clipboard.writeText("YOUR_CONTRACT_ADDRESS").then(() => {
+                alert("Contract Address Copied!");
+            });
+        }
+    </script>
+</body>
+</html>
